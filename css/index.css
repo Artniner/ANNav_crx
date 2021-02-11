@@ -1,0 +1,125 @@
+body {
+	--an-1st-background:#2e343a;  
+	--an-2nd-background:#3f464c;  
+	--an-fontcolor:#cbcbcb;  
+	--an-green:#9acc14;
+	--an-orange: #f96b1c;
+	--an-strong:#979898;
+}
+
+
+
+/* 列表 */
+.an-container *{
+	font-family:Consolas;
+	box-sizing: border-box;
+	line-height: 1.45;
+	font-size: 13px;
+	vertical-align: top;
+	color: var(--an-fontcolor);
+	border: none;
+}
+
+.an-container{
+	width: 3px; 
+	height: 100%; 
+    background: var(--an-1st-background); 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+	overflow: hidden;
+	transition: width .3s ease-in-out;
+	z-index: 99999;
+}
+
+.an-container:hover{
+	width: 350px;
+}
+
+/* container */
+.an-nav-list{
+	padding-left: 10px;
+}
+
+/* 搜索 */
+.search-field{
+	width: 100%;
+    padding-right: 10px;
+    margin: 0 auto;
+	margin-top: 25px;
+}
+
+.search-field form{
+	height: 40px;
+	width: 100%;
+}
+
+.search-field input{
+	background: var(--an-2nd-background);
+	width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+	border-left: 2px solid var(--an-green);
+    border-radius: 4px;
+    text-indent: 20px;
+    font-size: 15px;
+}
+
+/* 分类组 */
+.an-group{
+	overflow: hidden;
+	margin-top: 24px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.an-group:before, an-group:after{
+	content: " ";
+	display: table;
+}
+
+/* 标题 */
+.an-group > strong{
+	display: table;
+	padding: 6px 0;
+	font-weight: bold;
+    font-size: 15px;
+	text-transform: uppercase;
+    color: var(--an-strong);
+}
+
+/* 元素 */
+.an-item{
+	padding-left: 0;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+	width: 33.33333333%;
+	float: left;
+	position: relative;
+    min-height: 1px;
+}
+
+.an-item > a, .an-item > a:link, .an-item > a:visited{
+	background: var(--an-2nd-background);
+	display: block;
+    padding: 5px;
+    width: 100%;
+    border-radius: 3px;
+    border-left: 2px solid var(--an-green);
+	border-top: none;
+	border-bottom: none;
+	border-right: none;
+	text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.an-item > a:hover{
+	border-left: 3px solid var(--an-orange);
+    box-shadow: 0 3px 8px 0 rgb(0 0 0 / 70%);
+}
