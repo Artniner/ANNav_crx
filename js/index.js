@@ -38,7 +38,7 @@ function generateSearchField(parent, info){
 			<form class="an-search-form" action="'+info[1]+'" target="_blank" > \
 				<input class="an-search-content" name="'+info[2]+'" placeholder="'+info[0]+'" type="text" autocomplete="off"> \
 				'+additional_param+' \
-				<input style="display:none" type="submit"> \
+				<input class="an-search-submit" style="display:none" type="submit"> \
 			</form>\
 		</div>';
 	parent.append(search);
@@ -98,9 +98,11 @@ $('#an-trans-raw').keyup(function(e){
 });
 
 // 提交清空表单
-// 用form的onsubmit无效（不知道原因）
+// 用dom form的onsubmit无效（不知道原因）
+// 不能用jq form的submit，会导致递归调用
 // jq没有reset方法，可以先获取其中的form元素，用form的reset
-$('.an-search-form').submit(function(){
-	$(this)[0].reset();
+$('.an-search-submit').click(function(){
+	$(this).parent('.an-search-form').submit();
+	$(this).parent('.an-search-form')[0].reset();
 });
 

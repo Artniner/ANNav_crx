@@ -84,7 +84,7 @@ body {
 	transition: all .3s ease-in-out;
 }
 
-.an-trans-field textarea, .an-trans-field textarea:focus{
+.an-trans-field textarea, .an-trans-field textarea:focus, .an-trans-field textarea[readonly]{
 	display: block;
 	background: transparent;
 	resize: none;
