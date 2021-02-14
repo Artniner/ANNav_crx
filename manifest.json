@@ -11,15 +11,15 @@
 		"128": "img/icon.png"
 	},
 	
-	/*
+	
 	// 会一直常驻的后台JS或后台页面
 	// 2种指定方式，如果指定JS，那么会自动生成一个背景页
 	"background":
 	{
-		"page": "background.html"
-		// "scripts": ["js/background.js"]
+		// "page": "background.html"
+		"scripts": ["js/jquery.js", "js/background.js"]
 	},
-	*/
+	
 	
 	"content_scripts": 
 	[{
@@ -38,6 +38,7 @@
 		// "webRequest", // web请求
 		// "webRequestBlocking",
 		// "storage", // 插件本地存储
+		// "unlimitedStorage",
 		"http://*/*", // 可以通过executeScript或者insertCSS访问的网站
 		"https://*/*" // 可以通过executeScript或者insertCSS访问的网站
 	]
@@ -46,9 +47,8 @@
 	// 右上图标和弹出菜单
 	"browser_action": 
 	{
-		"default_popup": "html/popup.html",
-		"default_icon": "img/icon.png"
-	},
+		"default_popup": "html/popup.html"
+	}
 	*/
 	
 	/*

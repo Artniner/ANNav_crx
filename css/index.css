@@ -1,6 +1,6 @@
 body {
-	--an-1st-background:#2e343a;  
-	--an-2nd-background:#3f464c;  
+	--an-1st-background:#333333;  
+	--an-2nd-background:#3b3b3b;  
 	--an-fontcolor:#cbcbcb;  
 	--an-green:#9acc14;
 	--an-orange: #f96b1c;
@@ -14,7 +14,8 @@ body {
 	font-family:Consolas;
 	box-sizing: border-box;
 	line-height: 1.45;
-	font-size: 13px;
+	font-size: 15px;
+	text-align: left;
 	vertical-align: top;
 	color: var(--an-fontcolor);
 	border: none;
@@ -39,22 +40,22 @@ body {
 /* container */
 .an-nav-list{
 	padding-left: 10px;
+	padding-right: 10px;
 }
 
 /* 搜索 */
-.search-field{
+.an-search-field{
 	width: 100%;
-    padding-right: 10px;
     margin: 0 auto;
 	margin-top: 25px;
 }
 
-.search-field form{
+.an-search-field form{
 	height: 40px;
 	width: 100%;
 }
 
-.search-field input{
+.an-search-field input{
 	background: var(--an-2nd-background);
 	width: 100%;
     height: 100%;
@@ -62,8 +63,46 @@ body {
     border: none;
 	border-left: 2px solid var(--an-green);
     border-radius: 4px;
-    text-indent: 20px;
-    font-size: 15px;
+	box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%);
+    padding: 0 10px;
+	transition: all .3s ease-in-out;
+}
+
+/* 翻译 */
+.an-trans-field{
+	background: var(--an-2nd-background);
+	width: 100%;
+	height: 280px;
+    margin: 0 auto;
+	margin-top: 25px;
+    padding: 0 10px;
+	outline: none;
+    border: none;
+	border-left: 2px solid var(--an-green);
+    border-radius: 4px;
+	box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%);
+	transition: all .3s ease-in-out;
+}
+
+.an-trans-field textarea, .an-trans-field textarea:focus{
+	display: block;
+	background: transparent;
+	resize: none;
+	width: 100%;
+	height: 50%;
+	padding: 10px 0;
+	border: none;
+	outline: none;
+	overflow-y: hidden;
+}
+
+#an-trans-raw{
+	height: 26%;
+}
+
+#an-trans-result{
+	height: 74%;
+	border-top: 1.8px solid #4c4c4c;
 }
 
 /* 分类组 */
@@ -84,7 +123,6 @@ body {
 	display: table;
 	padding: 6px 0;
 	font-weight: bold;
-    font-size: 15px;
 	text-transform: uppercase;
     color: var(--an-strong);
 }
@@ -95,7 +133,6 @@ body {
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    text-align: center;
 	width: 33.33333333%;
 	float: left;
 	position: relative;
@@ -112,6 +149,8 @@ body {
 	border-top: none;
 	border-bottom: none;
 	border-right: none;
+	box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%);
+	text-align: center;
 	text-decoration: none;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -119,7 +158,12 @@ body {
     transition: all .3s ease-in-out;
 }
 
-.an-item > a:hover{
+.an-item > a:hover, .an-search-field input:hover, .an-search-field input:focus, .an-trans-field:hover{
+	border: none;
 	border-left: 3px solid var(--an-orange);
     box-shadow: 0 3px 8px 0 rgb(0 0 0 / 70%);
+}
+
+.an-item *{
+	font-size: 13px;
 }

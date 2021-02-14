@@ -1,4 +1,17 @@
 
+var search_wb = new Array(
+	'百度---https://www.baidu.com/s---wd',
+	'百度图片---https://image.baidu.com/search/index---word---tn=baiduimage',
+	'淘宝---https://s.taobao.com/search---q',
+	'京东---https://search.jd.com/Search---keyword',
+	'斗鱼---https://www.douyu.com/search/---kw',
+	'BiliBili---https://search.bilibili.com/all---keyword',
+	// '网易云音乐---https://music.163.com/#/search/m/---s',
+	'QQ音乐---https://y.qq.com/portal/search.html---w',
+	'GitHub---https://github.com/search---q',
+);
+
+/*
 // 一级分类---二级分类---类名---名称---URL---描述
 // 类名需要与 main-menu > li > ul > li 的 data-class 相同
 var webs = new Array(
@@ -218,52 +231,52 @@ var webs = new Array(
 	'其他---XXXX---other-web---360doc---http://www.360doc.com/---360 个人图书馆',
 	'其他---XXXX---other-web---ALT 字符表---https://blog.csdn.net/double_main/article/details/53426583---按 ALT 输入特殊字符的对照表',
 );
-
+*/
 
 var common_webs = new Array(
-    '社交---新浪微博---https://www.weibo.com/',
-    '社交---知乎---https://www.zhihu.com/',
-    '社交---豆瓣---https://www.douban.com/',
-    '社交---Instagram---https://www.instagram.com/',
-    '社交---Twitter---https://www.twitter.com/',
-    '社交---Facebook---https://www.facebook.com/',
-    '社交---QQ邮箱---https://mail.qq.com/',
-    '社交---网易邮箱---https://mail.163.com/',
-    '社交---Gmail---https://mail.google.com/',
+    'social---新浪微博---https://www.weibo.com/',
+    'social---知乎---https://www.zhihu.com/',
+    'social---豆瓣---https://www.douban.com/',
+    'social---Instagram---https://www.instagram.com/',
+    'social---Twitter---https://www.twitter.com/',
+    'social---Facebook---https://www.facebook.com/',
+    'social---QQ邮箱---https://mail.qq.com/',
+    'social---网易邮箱---https://mail.163.com/',
+    'social---Gmail---https://mail.google.com/',
 
-    '工具---有道翻译---http://fanyi.youdao.com/',
-    '工具---谷歌翻译---https://translate.google.cn/',
-    '工具---百度翻译---https://fanyi.baidu.com/',
-    '工具---快递100---https://www.kuaidi100.com/',
-    '工具---百度网盘---https://pan.baidu.com/',
-    '工具---115网盘---https://115.com/',
-    '工具---12306---https://www.12306.cn/',
-    '工具---携程---https://trains.ctrip.com/',
+    'tools---有道翻译---http://fanyi.youdao.com/',
+    'tools---谷歌翻译---https://translate.google.cn/',
+    'tools---百度翻译---https://fanyi.baidu.com/',
+    'tools---快递100---https://www.kuaidi100.com/',
+    'tools---百度网盘---https://pan.baidu.com/',
+    'tools---115网盘---https://115.com/',
+    'tools---12306---https://www.12306.cn/',
+    'tools---携程---https://trains.ctrip.com/',
     
-    '娱乐---斗鱼-关注---https://www.douyu.com/directory/myFollow',
-    '娱乐---虎牙---https://www.huya.com',
-    '娱乐---企鹅电竞---https://egame.qq.com/',
-    '娱乐---BiliBili---https://www.bilibili.com/',
-    '娱乐---ACFUN---http://www.acfun.cn/index.html',
-    '娱乐---优酷---https://www.youku.com/',
-    '娱乐---爱奇艺---https://www.iqiyi.com/',
-    '娱乐---网易云音乐---https://music.163.com/',
-    '娱乐---QQ音乐---https://y.qq.com/',
+    'entertainment---斗鱼-关注---https://www.douyu.com/directory/myFollow',
+    'entertainment---虎牙---https://www.huya.com',
+    'entertainment---企鹅电竞---https://egame.qq.com/',
+    'entertainment---BiliBili---https://www.bilibili.com/',
+    'entertainment---ACFUN---http://www.acfun.cn/index.html',
+    'entertainment---优酷---https://www.youku.com/',
+    'entertainment---爱奇艺---https://www.iqiyi.com/',
+    'entertainment---网易云音乐---https://music.163.com/',
+    'entertainment---QQ音乐---https://y.qq.com/',
 
-    '购物---京东---https://www.jd.com/',
-    '购物---淘宝---https://www.taobao.com/',
-    '购物---天猫---https://www.tmall.com/',
-    '购物---唯品会---https://www.vip.com/',
-    '购物---苏宁易购---https://www.suning.com/',
-    '购物---亚马逊---https://www.amazon.cn/',
-    '购物---考拉海购---https://www.kaola.com/',
-    '购物---国美-领券---https://lingquan.gome.com.cn/',
-    '购物---当当---http://www.dangdang.com/',
+    'shopping---京东---https://www.jd.com/',
+    'shopping---淘宝---https://www.taobao.com/',
+    'shopping---天猫---https://www.tmall.com/',
+    'shopping---唯品会---https://www.vip.com/',
+    'shopping---苏宁易购---https://www.suning.com/',
+    'shopping---亚马逊---https://www.amazon.cn/',
+    'shopping---考拉海购---https://www.kaola.com/',
+    'shopping---国美-领券---https://lingquan.gome.com.cn/',
+    'shopping---当当---http://www.dangdang.com/',
 
-    '软件---I Tell You---http://msdn.itellyou.cn/',
-    '软件---软件缘---https://www.appcgn.com/',
-    '软件---ZD423---https://www.zdfans.com/',
+    'software---I Tell You---http://msdn.itellyou.cn/',
+    'software---软件缘---https://www.appcgn.com/',
+    'software---ZD423---https://www.zdfans.com/',
 
-    '开发---GitHub---https://github.com/',
-    '开发---阿里图标库---https://www.iconfont.cn/'
+    'develop---GitHub---https://github.com/',
+    'develop---阿里图标库---https://www.iconfont.cn/'
 );
